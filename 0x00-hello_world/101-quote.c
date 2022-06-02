@@ -5,11 +5,11 @@
  *
  * Description: prints a string to the standard error
  *
- * Return: Always 0(Success)
+ * Return: Always 1(Error)
  */
 
 int main(void)
 {
-fprintf(stderr,"%s",  "and that piece of art is useful\" - Dora Korpar, 2015-10-19");
-return (0);
+fprintf(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-199");
+return (1);
 }
