@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
-
 /**
  * main - Entry Point
  *
@@ -11,6 +11,7 @@
 
 int main(void)
 {
-write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-199\n", 59);
+char err[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-199\n";
+write(STDOUT_FILENO,  err, 59);
 return (1);
 }
