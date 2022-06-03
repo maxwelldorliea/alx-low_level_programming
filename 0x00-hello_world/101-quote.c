@@ -11,6 +11,6 @@
 int main(void)
 {
 char err[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-199";
-fprintf(stderr, "%s", err, 59);
+fprintf(stderr, "%s\n", err);
 exit(1);
 }
