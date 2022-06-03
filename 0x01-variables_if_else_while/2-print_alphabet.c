@@ -13,7 +13,9 @@ int main(void)
 {
 	char alpha[] = "abcdefhhijklmnopqrstuvwxzy";
 
-	for (int i = 0; i < 26; i++)
+	int i;
+
+	for (i = 0; i < 26; i++)
 		putchar(alpha[i]);
 	putchar('\n');
 	return (0);
