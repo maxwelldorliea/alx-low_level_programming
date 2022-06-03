@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	char alpha[] = "abcdefhhijklmnopqrstuvwxyz";
+	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
 
 	int i;
 
