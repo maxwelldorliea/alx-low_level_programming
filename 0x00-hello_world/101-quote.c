@@ -10,7 +10,7 @@
 
 int main(void)
 {
-char err[] = "and that piece of art is useful\" -Dora Korpar, 2015-10-199";
-write(2, err, sizeof(err));
+char err[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-199";
+fprintf(stderr, err);
 return (1);
 }
