@@ -14,8 +14,9 @@ int main(void)
 
 	int i;
 
-	for (i = 26; i > 0; i--)
-		putchar(alph[i]);
+	for (i = 26; i >= 0; i--)
+		if (alph[i] != '\n')
+			putchar(alph[i]);
 	putchar('\n');
 	return (0);
 }
