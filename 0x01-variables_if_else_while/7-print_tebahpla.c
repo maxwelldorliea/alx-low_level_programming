@@ -10,13 +10,12 @@
 
 int main(void)
 {
-	char alph[] = "abcdefghijklmnopqrstuvwxyz";
+	/* char alph[27] = "abcdefghijklmnopqrstuvwxyz";*/
 
-	int i;
+	char l;
 
-	for (i = 26; i >= 0; i--)
-		if (alph[i] != '\n')
-			putchar(alph[i]);
+	for (l = 'z'; l >= 'a'; l--)
+		putchar(l);
 	putchar('\n');
 	return (0);
 }
