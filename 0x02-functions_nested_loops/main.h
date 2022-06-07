@@ -16,3 +16,12 @@ int _putchar(int _char);
  */
 
 void print_alphabet(void);
+
+
+/**
+ * print_alphabet10x - print all alphabets ten times
+ *
+ * Return: nothing
+ */
+
+void print_alphabet_x10(void);
