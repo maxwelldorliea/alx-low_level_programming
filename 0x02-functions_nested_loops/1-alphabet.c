@@ -2,13 +2,13 @@
 
 
 /**
- * main - prints alphabet in lowercase
+ * print_alphabet - prints alphabet in lowercase
  *
- * Return: Always 0
+ * Return: void
  */
 
 
-int main(void)
+void print_alphabet(void)
 {
 	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
 
@@ -17,5 +17,18 @@ int main(void)
 	for (i = 0; i < 26; i++)
 		_putchar(alpha[i]);
 	_putchar('\n');
+	return;
+}
+
+
+/**
+ * main - Entry Point
+ *
+ * Return: Always 0
+ */
+
+int main(void)
+{
+	print_alphabet();
 	return (0);
 }
