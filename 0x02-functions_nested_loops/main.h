@@ -44,3 +44,14 @@ int _islower(int c);
  */
 
 int _isalpha(int c);
+
+/**
+ * print_sign - print + for positive, - for negative 0 for zero
+ *
+ * @n: value for checking
+ *
+ * Return: int
+ */
+int print_sign(int n);
+
+
