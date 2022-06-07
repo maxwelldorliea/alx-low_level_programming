@@ -93,3 +93,15 @@ void jack_bauer(void);
 void times_table(void);
 
 
+/**
+ * add - print the  sum of two integer
+ *
+ * @n: first operand
+ *
+ * @n1: seconed operand
+ * 
+ * Return: int
+ */
+
+int add(int, int);
+
