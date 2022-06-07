@@ -10,13 +10,15 @@
 
 void print_alphabet_x10(void)
 {
-	int i, j;
+	int i, j, s = 26;
 
 	char l[] = "abcdefghijklmnopqrstuvwxyz\n";
 	
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j <= 26; j++)
+		for (j = 0; j <= c; j++)
+			if (i == 9 && j == 26)
+				break;
 			_putchar(l[j]);
 	}
 
