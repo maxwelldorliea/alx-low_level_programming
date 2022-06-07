@@ -55,3 +55,14 @@ int _isalpha(int c);
 int print_sign(int n);
 
 
+/**
+ * _abs - calculate the absoluten of a number
+ *
+ * Return: int
+ */
+
+
+int _abs(int);
+
+
+
