@@ -29,10 +29,6 @@ void times_table(void)
 			_putchar('0' + b % 10);
 			_putchar('\n');
 		}
-
-		if (i == 9)
-			break;
-
 		_putchar(',');
 		_putchar(' ');
 	}
