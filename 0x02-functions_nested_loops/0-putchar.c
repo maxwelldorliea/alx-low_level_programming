@@ -11,7 +11,9 @@ int main(void)
 {
 	char word[9] = "_putchar";
 
-	for (int i = 0; i < 9; i++)
+	int i;
+
+	for (i = 0; i < 9; i++)
 		_putchar(word[i]);
 	_putchar('\n');
 	return (0);
