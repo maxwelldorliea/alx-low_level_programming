@@ -124,3 +124,16 @@ void print_to_98(int n);
 
 
 void print_times_table(int n);
+
+
+/**
+ * natural_num - print the sum of natural number below 1024, multiple of 3, 5
+ *
+ * Return: Nothing
+ */
+
+
+void natural_num(void);
+
+
+
