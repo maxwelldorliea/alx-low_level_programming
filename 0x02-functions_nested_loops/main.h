@@ -114,3 +114,13 @@ int add(int, int);
  */
 void print_to_98(int n);
 
+/**
+ * print_times_table - print from 0 to times table
+ *
+ * @n: Value to be serve as range
+ *
+ * Return: Nothing
+ */
+
+
+void print_times_table(int n);
