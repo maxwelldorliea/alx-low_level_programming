@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * natural_num - print the sum of natural number below 1024, multiple of 3, 5
+ * main - print the sum of natural number below 1024, multiple of 3, 5
  *
- * Return: Nothing
+ * Return: Always 0
  */
 
 
-void natural_num(void)
+int main(void)
 {
 	int i, sum = 0;
 
@@ -18,4 +18,6 @@ void natural_num(void)
 	}
 
 	printf("%d\n", sum);
+
+	return (0);
 }
