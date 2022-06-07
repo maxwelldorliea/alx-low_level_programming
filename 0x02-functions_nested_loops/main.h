@@ -25,3 +25,11 @@ void print_alphabet(void);
  */
 
 void print_alphabet_x10(void);
+
+/**
+ * islower - check if a character is a lowercase
+ *
+ * Return: int
+ */
+
+int _islower(int c);
