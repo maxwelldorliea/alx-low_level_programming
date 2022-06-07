@@ -105,3 +105,12 @@ void times_table(void);
 
 int add(int, int);
 
+/**
+ * print_to_98 - print all natural from 1 to 98
+ *
+ * @n: value to serve as range
+ *
+ * Return: Nothing
+ */
+void print_to_98(int n);
+
