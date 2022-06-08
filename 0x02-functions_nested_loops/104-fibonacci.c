@@ -8,43 +8,43 @@
 
 int main(void)
 {
-	unsigned long c = 98, n1 = 1, n2 = 2, prevS = 0;
-	unsigned long prevSh1, prevvSh2, prevSh3, prevSh4, half, half2;
-	int i;
+int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+	unsigned long half1, half2;
 
-	for (i = 0; i < 92; i++)
+	for (count = 0; count < 92; count++)
 	{
-		prevS = n1 + n2;
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
 
-		printf("%lu, ", prevS);
-
-		n1 = n2;
-		n2 = prevS;
+		fib1 = fib2;
+		fib2 = sum;
 	}
 
-	prevSh1 = n1 / 1000000000;
-	prevSh3 = n2 / 1000000000;
-	prevSh2 = n1 % 1000000000;
-	prevSh4 = n2 % 100000000;
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
 
 	for (count = 93; count < 99; count++)
 	{
-		half1 = presSh1 + prevSh;
-		half2 = fib1_half2 + prevSh1;
-		if (prevSh2 + prevSh4 > 9999999999)
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (fib1_half2 + fib2_half2 > 9999999999)
 		{
-			half += 1;
+			half1 += 1;
 			half2 %= 10000000000;
 		}
 
-		printf("%lu%lu", half, half2);
+		printf("%lu%lu", half1, half2);
 		if (count != 98)
 			printf(", ");
 
-		prevSh1 = prevSh3;
-		prevSh2 = prevSh4;
-		prevSh2 = half;
-		prevSh = half2;
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
 	}
 	printf("\n");
 	return (0);
