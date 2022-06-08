@@ -15,8 +15,8 @@ int main(void)
 		prevS = n1 + n2;
 		if (prevS > 4000000)
 			break;
-		if (n1 % 2 == 0)
-			sum += n1;
+		if (prevS % 2 == 0)
+			sum += prevS;
 		n1 = n2;
 		n2 = prevS;
 	}
