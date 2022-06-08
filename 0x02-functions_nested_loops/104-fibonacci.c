@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	long int c = 98, n1 = 1, n2 = 2, prevS = 0, i;
+	unsigned long c = 98, n1 = 1, n2 = 2, prevS = 0, i;
 
 	for (i = 1; i <= c; i++)
 	{
-		printf("%ld", n1);
+		printf("%ul", n1);
 
 		if (i == 98)
 		{
