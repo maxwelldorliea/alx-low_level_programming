@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long int n1 = 1, n2 = 2, prevS = 0, sum = 0;
+	long int n1 = 0, n2 = 1, prevS = 0, sum = 0;
 
 	while (1)
 	{
