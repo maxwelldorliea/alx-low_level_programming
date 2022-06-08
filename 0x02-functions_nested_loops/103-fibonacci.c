@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long int c = 10, n1 = 1, n2 = 2, prevS = 0, sum = 0;
+	long int n1 = 1, n2 = 2, prevS = 0, sum = 0;
 
 	while (1)
 	{
@@ -21,6 +21,6 @@ int main(void)
 		n2 = prevS;
 	}
 
-	printf("%d\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
