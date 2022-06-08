@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 1; i <= c; i++)
 	{
-		printf("%ul", n1);
+		printf("%lu", n1);
 
 		if (i == 98)
 		{
