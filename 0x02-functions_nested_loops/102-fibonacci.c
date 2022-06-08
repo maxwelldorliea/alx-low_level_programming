@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int c = 50, n1 = 1, n2 = 2, prevS = 0, i;
+	long long int c = 50, n1 = 1, n2 = 2, prevS = 0, i;
 
 	for (i = 1; i <= c; i++)
 	{
