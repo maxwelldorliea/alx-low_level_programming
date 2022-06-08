@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 1; i <= c; i++)
 	{
-		printf("%d ", n1);
+		printf("%ld ", n1);
 
 		prevS = n1 + n2;
 		n1 = n2;
