@@ -19,9 +19,13 @@ int main(void)
 			printf("\n");
 			break;
 		}
-	}
 
-	printf(", ");
+		printf(", ");
+
+		prevS = n1 + n2;
+		n1 = n2;
+		n2 = prevS;
+	}
 
 	return (0);
 }
