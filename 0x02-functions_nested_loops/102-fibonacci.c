@@ -17,6 +17,7 @@ int main(void)
 		{
 			printf("\n");
 			break;
+		}
 		printf(", ");
 
 		prevS = n1 + n2;
