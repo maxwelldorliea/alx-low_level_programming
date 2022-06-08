@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	long long int c = 50, n1 = 1, n2 = 2, prevS = 0, i;
+	long int c = 50, n1 = 1, n2 = 2, prevS = 0, i;
 
 	for (i = 1; i <= c; i++)
 	{
-		printf("%lld ", n1);
+		printf("%ld ", n1);
 
 		prevS = n1 + n2;
 		n1 = n2;
