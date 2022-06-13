@@ -12,4 +12,5 @@ int _putchar(int _char);
 
 void print_rev(char *s);
 
+void rev_string(char *s);
 
