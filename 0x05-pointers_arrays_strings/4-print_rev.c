@@ -13,7 +13,7 @@ void print_rev(char *s)
 {
 	char c[100];
 
-	int i = 0;
+	int n, i = 0;
 
 	while (*s != '\0')
 	{
@@ -23,7 +23,7 @@ void print_rev(char *s)
 		s++;
 	}
 
-	int n = i - 1;
+	n = i - 1;
 
 	while (n >= 0)
 	{
