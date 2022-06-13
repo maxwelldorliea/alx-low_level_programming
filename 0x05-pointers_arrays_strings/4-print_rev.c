@@ -11,14 +11,12 @@
 
 void print_rev(char *s)
 {
-	char c[100];
+	char *c = s;
 
 	int n, i = 0;
 
 	while (*s != '\0')
 	{
-		c[i] = *s;
-
 		i++;
 		s++;
 	}
