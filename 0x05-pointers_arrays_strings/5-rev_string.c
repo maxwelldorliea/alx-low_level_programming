@@ -15,10 +15,10 @@ void rev_string(char *s)
 {
 	int c = 0, i = 0;
 
-        char tmp;
+	char tmp;
 
-        while (s[i] != '\0')
-        {
+	while (s[i] != '\0')
+	{
 		i++;
 	}
 
@@ -30,6 +30,6 @@ void rev_string(char *s)
 		s[i - c - 1] = tmp;
 		c++;
 	}
-      
-	
+
+
 }
