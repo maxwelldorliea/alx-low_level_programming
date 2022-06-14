@@ -16,11 +16,14 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] < 48 || s[i] > 57)
-			return (0);
+			continue;
 		else if (s[i] >= 48 || s[i] <= 57)
 			sum = sum * 10 + (s[i] - 48);
 		i++;
 	}
+
+	if (s[0] == '-')
+		return (-1 * sum);
 
 	return (sum);
 }
