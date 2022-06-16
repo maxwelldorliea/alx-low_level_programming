@@ -11,17 +11,17 @@
 
 char *rot13(char *s)
 {
+	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rapha[] = "NOPQRSTYVWXYZABCDECGHIJKLMnopqrsruvwxyzabcdefghijklm";
 	int i = 0, j;
 
 	while (s[i])
 	{
-		for (j = 0; j < 26; j++)
+		for (j = 0; j < 52; j++)
 		{
 
-			if (s[i] + 13 >= 'a' &&
-			    s[i] + 13 <= 'z')
-				s[i] += 32;
-			s[i] -= 13;
+			if (s[i] == alpha[j])
+				s[i] = rapha[j];
 		}
 
 		i++;
