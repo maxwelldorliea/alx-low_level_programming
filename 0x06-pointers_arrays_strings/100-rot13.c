@@ -21,7 +21,10 @@ char *rot13(char *s)
 		{
 
 			if (s[i] == alpha[j])
+			{
 				s[i] = rapha[j];
+				break;
+			}
 		}
 
 		i++;
