@@ -13,10 +13,10 @@ int get_len(char *str)
 {
 	int len = 0;
 
-	while (*s != '\0')
+	while (*str != '\0')
 	{
 		len++;
-		s++;
+		str++;
 	}
 
 	return (len);
@@ -38,12 +38,12 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0, len = get_len(dest);
 
-	while (*s != '\0' && i < n)
+	while (*src != '\0' && i < n)
 	{
 		dest[len] = *src;
 
 		len++;
-		s++;
+		src++;
 		i++;
 	}
 
