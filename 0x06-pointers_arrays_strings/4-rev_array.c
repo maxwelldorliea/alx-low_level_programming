@@ -34,6 +34,4 @@ void reverse_array(int *a, int n)
 
 	free(narr);
 	narr = NULL;
-
-	return (a);
 }
