@@ -8,7 +8,7 @@
  * Return: int
  */
 
-int get_len(char *str)
+/*int get_len(char *str)
 {
 	int len = 0;
 
@@ -19,7 +19,7 @@ int get_len(char *str)
 	}
 
 	return (len);
-}
+}*/
 
 /**
  * _strncpy - Copy n bites of src to dest
@@ -33,18 +33,22 @@ int get_len(char *str)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0, len = get_len(dest);
+	int i = 0;
 
 	while (*src != '\0' && i < n)
 	{
-		dest[len] = *src;
+		dest[i] = *src;
 
 		i++;
-		len++;
 		src++;
 	}
 
-	dest[len] = '\0';
+	while (i < n)
+	{
 
+	dest[i] = '\0';
+	i++;
+
+	}
 	return (dest);
 }
