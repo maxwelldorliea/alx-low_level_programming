@@ -10,19 +10,20 @@
 
 char *leet(char *s)
 {
-	char *key = "ol!ea!!t";
-	int i = 0, j = 0;
+	char key[8] = {'O','L','?','E','A','?','?','T'};
+	int i = 0, j;
 
-	while (s[i] != '\0')
+	while (s[i])
 	{
-		while (key[j] != '\0')
+		for (j = 0; j < 8; j++)
 		{
 			if (s[i] == key[j] ||
-			    (s[i] + 32) == key[j])
+			    s[i] - 32 == key[j])
 				s[i] = j + '0';
-			j++;
 		}
 
 		i++;
 	}
+
+	return (s);
 }
