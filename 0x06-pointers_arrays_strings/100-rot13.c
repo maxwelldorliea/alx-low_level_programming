@@ -12,7 +12,7 @@
 char *rot13(char *s)
 {
 	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rapha[] = "NOPQRSTYVWXYZABCDECGHIJKLMnopqrsruvwxyzabcdefghijklm";
+	char rapha[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i = 0, j;
 
 	while (s[i])
