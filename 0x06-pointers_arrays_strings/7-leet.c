@@ -10,7 +10,7 @@
 
 char *leet(char *s)
 {
-	char key[8] = {'O','L','?','E','A','?','?','T'};
+	char key[8] = {'o', 'l', '?', 'e', 'a', '?', '?', 't'};
 	int i = 0, j;
 
 	while (s[i])
@@ -18,7 +18,7 @@ char *leet(char *s)
 		for (j = 0; j < 8; j++)
 		{
 			if (s[i] == key[j] ||
-			    s[i] - 32 == key[j])
+			    s[i] + 32 == key[j])
 				s[i] = j + '0';
 		}
 
