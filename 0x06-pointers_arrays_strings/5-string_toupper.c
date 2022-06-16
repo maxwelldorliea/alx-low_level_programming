@@ -23,7 +23,7 @@ char *string_toupper(char *str)
 			{
 				int num = ((int)str[i]) - 32;
 
-				s[i] = (char)num;
+				str[i] = (char)num;
 				break;
 			}
 		}
@@ -31,5 +31,5 @@ char *string_toupper(char *str)
 		i++;
 	}
 
-	return (s);
+	return (str);
 }
