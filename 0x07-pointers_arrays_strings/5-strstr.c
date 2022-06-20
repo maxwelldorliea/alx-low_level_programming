@@ -20,7 +20,7 @@ int check(char *s1, char *s2)
 		s2++;
 	}
 
-	return (1);
+	return (*s2 == '\0');
 }
 
 /**
