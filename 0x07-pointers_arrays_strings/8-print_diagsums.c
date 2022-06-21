@@ -14,12 +14,13 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	long int sum = 0, len;
-	len = size * size;
+	long int sum = 0, len = size * size;
 
 	for (i = 0; i < len; i += size + 1)
 		sum += a[i];
 	printf("%li, ", sum);
+
+	sum = 0;
 
 	for (i = len - 1; i <= len - size + 1; i += size - 1)
 		sum += a[i];
