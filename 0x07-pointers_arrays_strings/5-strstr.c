@@ -35,6 +35,9 @@ int check(char *s1, char *s2)
 
 char *_strstr(char *haystack, char *needle)
 {
+	if (*needle == '\0')
+		return (needle);
+
 	while (*haystack)
 	{
 		if ((*haystack == *needle) && check(haystack, needle))
