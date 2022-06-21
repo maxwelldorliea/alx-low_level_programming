@@ -19,11 +19,9 @@ void print_diagsums(int *a, int size)
 	{
 	for (j = 0; j <= size; j++)
 	{
-		(i == j) ? m1 += a[k] : 0;
-
-		(i + j == size - 1) ? m2 += a[k] : 0;
-
-		k++;
+		(i == j) ? d1 += a[k] : 0;
+		(i + j == size - 1) ? d2 += a[k] : 0;
+								k++;
 	}
 
 	printf("%d, %d\n", m1, m2);
