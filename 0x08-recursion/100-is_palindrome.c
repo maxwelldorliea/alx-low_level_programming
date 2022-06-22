@@ -1,5 +1,7 @@
 #include "main.h"
 #include <string.h>
+
+
 /**
  * is_palindrome - check if a string is palindrome
  *
@@ -12,7 +14,7 @@ int is_palindrome(char *s)
 {
 	if (!*s)
 		return (0);
-	return (palindrome(0, s));
+	return (ch_palind(0, s));
 }
 /**
  * palindrome - check if a number is a palindrome
@@ -23,14 +25,14 @@ int is_palindrome(char *s)
  * Return: int
  */
 
-int palindrome(int curri, char *s)
+int ch_palind(int curri, char *s)
 {
-	int l = strlen(s) - 1 - curri;
+	int l = strlen(s)  - curri;
 	int i = curri - 1;
 
 	if (s[i] != s[l])
 		return (0);
 	if (l == 0 && s[i] == s[l])
 		return (1);
-	return (palindrome(curri + 1, s));
+	return (ch_palind(curri + 1, s));
 }
