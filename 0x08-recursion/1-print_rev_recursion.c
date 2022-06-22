@@ -15,7 +15,7 @@ void _print_rev_recursion(char *s)
 	if (*s == '\0')
 		return;
 
-	if (len >= 0)
+	if (len < 0)
 	{
 		_putchar('\n');
 		return;
@@ -23,6 +23,7 @@ void _print_rev_recursion(char *s)
 
 	_putchar(s[len]);
 	len--;
+	s++;
 
 	_print_rev_recursion(s);
 }
