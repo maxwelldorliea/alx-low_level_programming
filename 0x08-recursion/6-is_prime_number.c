@@ -1,6 +1,4 @@
 #include "main.h"
-#include <math.h>
-
 /**
  * is_prime_number - check if a number is prime
  *
@@ -29,8 +27,7 @@ int is_prime_number(int n)
 
 int prime(int n, int cv)
 {
-	double dn = (double)n;
-	if (cv < ((int)sqrt(dn)) && n % cv == 0)
+	if (cv < n && n % cv == 0)
 		return (0);
 	if (cv == n)
 		return (1);
