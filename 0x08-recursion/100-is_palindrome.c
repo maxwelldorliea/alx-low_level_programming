@@ -17,7 +17,7 @@ int is_palindrome(char *s)
 	return (ch_palind(0, s));
 }
 /**
- * palindrome - check if a number is a palindrome
+ * ch_palind - check if a number is a palindrome
  *
  * @curri: int
  * @s: char pointer
