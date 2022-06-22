@@ -23,3 +23,5 @@ int prime(int n, int cv);
 int is_palindrome(char *s);
 
 int ch_palind(int curri, char *s);
+
+ int wildcmp(char *s1, char *s2);
