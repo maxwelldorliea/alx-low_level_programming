@@ -8,20 +8,16 @@
  * Return: Nothing
  */
 
-int i = 0;
-
 void _print_rev_recursion(char *s)
 {
+	static int i = 0;
 	int len = strlen(s) - 1 - i;
 
 	if (*s == '\0')
 		return;
 
 	if (len < 0)
-	{
-		_putchar('\n');
 		return;
-	}
 
 	_putchar(s[len]);
 	len--;
