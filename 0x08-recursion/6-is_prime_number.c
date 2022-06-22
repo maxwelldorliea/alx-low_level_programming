@@ -29,7 +29,7 @@ int is_prime_number(int n)
 
 int prime(int n, int cv)
 {
-	if (cv < sqrt(n) && n % cv == 0)
+	if (cv < ((int)sqrt(n)) && n % cv == 0)
 		return (0);
 	if (cv == n)
 		return (1);
