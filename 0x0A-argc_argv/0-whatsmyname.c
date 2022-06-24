@@ -5,12 +5,14 @@
  * main - prints the name of the program
  *
  * @argc: int
- * @argv: char pointer to pointwr
+ * @argv: char pointer to pointer
+ *
+ * Return: int
 */
 
 
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
