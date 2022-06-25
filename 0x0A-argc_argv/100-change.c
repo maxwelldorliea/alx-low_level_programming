@@ -12,64 +12,35 @@
 
 int main(int argc, char *argv[])
 {
-	int ch = 0;
-
-	int myn;
+	int myn, i, ch = 0;
+	int chg[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-
 		return (1);
 	}
-
 	myn = strtol(argv[1], NULL, 10);
 
 	if (myn < 0)
 	{
 		printf("%d\n", 0);
-
 		return (0);
 	}
 
 	while (myn > 0)
 	{
-		if (myn >= 25)
+		for (i = 0; i < 5; i++)
 		{
-			ch++;
-			myn -= 25;
+			if (myn >= chg[i])
+			{
+				ch++;
+				myn -= chg[i];
+				break;
+			}
 		}
-
-		else if (myn >= 10)
-		{
-			ch++;
-			myn -= 10;
-		}
-
-		else if (myn >= 5)
-		{
-			ch++;
-
-			myn -= 5;
-		}
-
-		else if (myn >= 2)
-		{
-			ch++;
-			myn -= 2;
-		}
-
-		else if (myn >= 1)
-		{
-			ch++;
-			myn -= 1;
-		}
-
 	}
-
 	printf("%d\n", ch);
-
 	return (0);
-
 }
-	
+
