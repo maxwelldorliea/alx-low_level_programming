@@ -16,21 +16,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, k, c = 0, sum = 0;
+	int i, k, sum = 0;
 
-	for (j = 1; j < argc; j++)
-	{
-		int currv = strtol(argv[j], NULL, 10);
-		char *ch = "0";
-
-		if(currv != 0 || argv[j] == ch)
-		{
-			c++;
-			break;
-		}
-	}
-
-	if (!c)
+	if (argc == 1)
 	{
 		printf("%d\n", 0);
 		exit(EXIT_SUCCESS);
@@ -44,7 +32,7 @@ int main(int argc, char *argv[])
 		int len = strlen(argv[i]);
 
 		for (k = 0; k < len; k++)
-		{	
+		{
 
 			if (!isdigit(argv[i][k]))
 			{
