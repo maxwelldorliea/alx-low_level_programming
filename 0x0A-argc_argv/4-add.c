@@ -14,9 +14,21 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, j, c = 0, sum = 0;
 
-	if (argc < 3)
+	for (j = 1; j < argc; j++)
+	{
+		int currv = strtol(argv[j], NULL, 10);
+		char *ch = "0";
+
+		if(currv != 0 || argv[j] == ch)
+		{
+			c++;
+			break;
+		}
+	}
+
+	if (!c)
 	{
 		printf("%d\n", 0);
 		exit(EXIT_SUCCESS);
