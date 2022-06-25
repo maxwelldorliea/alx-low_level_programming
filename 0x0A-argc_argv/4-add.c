@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 
 /**
@@ -14,7 +16,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, c = 0, sum = 0;
+	int i, j, k, c = 0, sum = 0;
 
 	for (j = 1; j < argc; j++)
 	{
@@ -39,13 +41,16 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		int currv = strtol(argv[i], NULL, 10);
+		int len = strlen(argv[i]);
 
-		char *ch = "0";
+		for (k = 0; k < len; k++)
+		{	
 
-		if (currv == 0 && *argv[i] != *ch)
-		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][k]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 
 		sum += currv;
