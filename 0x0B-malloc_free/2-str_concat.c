@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 		if (s1_len > i)
 			ans[i] = s1[j];
 
-		else if (i == s1_len)
+		else if (i == s1_len - 1)
 			j = 0;
 
 		else
