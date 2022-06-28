@@ -37,16 +37,15 @@ int get_2d_len(char **s)
 
 char *argstostr(int ac, char **av)
 {
-	int aac = ac - 1;
-	int size, i = 1, j, k = 0;
+	int size, i = 0, j, k = 0;
 	char *s = NULL;
 
-	if (aac == 0 || *av == NULL)
+	if (ac == 0 || *av == NULL)
 		return (NULL);
 
 	size = get_2d_len(av);
 
-	s = malloc(sizeof(*s) * (size + aac));
+	s = malloc(sizeof(*s) * (size + ac));
 
 	if (s == NULL)
 		return (NULL);
