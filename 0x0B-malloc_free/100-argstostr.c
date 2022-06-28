@@ -45,7 +45,7 @@ char *argstostr(int ac, char **av)
 
 	size = get_2d_len(av);
 
-	s = malloc(sizeof(*s) * (size + ac));
+	s = malloc(sizeof(*s) * (size + ac) + 1);
 
 	if (s == NULL)
 		return (NULL);
