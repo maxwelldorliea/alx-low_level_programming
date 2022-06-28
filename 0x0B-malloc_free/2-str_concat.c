@@ -14,7 +14,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int s1_len, s2_len, t_len, i = 0;
+	int s1_len, s2_len, t_len, i = 0, j = 0;
 	char *ans;
 
 	if (s1 == NULL)
@@ -33,11 +33,11 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 
-	while ((s2_len - 1) >= 0)
+	while (j < s2_len)
 	{
-		ans[i] = *s2;
+		ans[i] = s[j];
 
-		s2++;
+		j++;
 		i++;
 	}
 
