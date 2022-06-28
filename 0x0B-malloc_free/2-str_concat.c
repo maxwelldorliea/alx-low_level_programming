@@ -29,9 +29,9 @@ char *str_concat(char *s1, char *s2)
 
 	while (i < t_len)
 	{
-		if (i < s1_len)
-			ans[i] = s1[i];
-		ans[i] = s2[i];
+		if (i >= s1_len)
+			ans[i] = s2[i];
+		ans[i] = s1[i];
 
 		i++;
 	}
