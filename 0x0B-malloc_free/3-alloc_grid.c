@@ -12,16 +12,21 @@
 
 int **alloc_grid(int width, int height)
 {
-	int i = 0, j = 0,  **ans = NULL;
-	int len = sizeof(int *) * height + sizeof(int) * width * height;
+	int i = 0, j = 0, k = 0,  **ans = NULL;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	ans = (int **)malloc(len);
+	ans = malloc(sizeof(ans) * height);
 
 	if (ans == NULL)
 		return (NULL);
+
+	while (k < height)
+	{
+		ans[k] = malloc(sizeof(ans[k]) * width);
+		k++;
+	}
 
 	while (i < height)
 	{
