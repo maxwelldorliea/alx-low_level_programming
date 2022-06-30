@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 /**
  * main - prints the product of two positive number
@@ -13,9 +14,10 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned int i = 1, j = 0, prod = 1, len;
+	unsigned int j = 0, prod = 1, len, n;
+	int i = 1;
 
-	if (argc > 3)
+	if (argc != 3)
 	{
 		puts("Error");
 		exit(98);
@@ -27,14 +29,14 @@ int main(int argc, char *argv[])
 
 		for (; j < len; j++)
 		{
-			if (!isdigit(s[i][j]))
+			if (!isdigit(argv[i][j]))
 			{
 				puts("Error");
 				exit(98);
 			}
 		}
 
-		int n = strtol(s[i]);
+		n = strtol(argv[i], NULL, 10);
 
 		prod *= n;
 
