@@ -12,7 +12,7 @@
 
 int *array_range(int min, int max)
 {
-	int i = min, len, *nwarr = NULL;
+	int len, *nwarr = NULL;
 
 	if (min > max)
 		return (NULL);
@@ -23,10 +23,10 @@ int *array_range(int min, int max)
 	if (nwarr == NULL)
 		return (NULL);
 
-	while (i <= len)
+	while (min < max)
 	{
-		nwarr[i] = i;
-		i++;
+		nwarr[min] = min;
+		min++;
 	}
 
 	return (nwarr);
