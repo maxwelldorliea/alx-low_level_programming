@@ -25,15 +25,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	s1_len = strlen(s1);
 	s2_len = strlen(s2);
-	sum = s1_len + s2_len;
-	nwstr = malloc(sizeof(*nwstr) * (sum) + 1);
 
-	if (nwstr == NULL)
-		return (NULL);
 	if (n >= s2_len)
 		len = s2_len;
 	else
 		len = n;
+
+	sum = s1_len + len;
+	nwstr = malloc(sizeof(*nwstr) * (sum) + 1);
+
+	if (nwstr == NULL)
+		return (NULL);
 
 	while (i < s1_len)
 	{
