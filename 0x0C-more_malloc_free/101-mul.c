@@ -14,36 +14,44 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned int j = 0, prod = 1, len, n;
-	int i = 1;
+	unsigned int j = 0, prod = 1, len, n, f = 0, k = 2, i = 1;
+	char *chd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	if (argc != 3)
 	{
 		puts("Error");
 		exit(98);
 	}
-
-	while (i < argc)
+	while (i <= 1)
 	{
 		len = strlen(argv[i]);
-
 		for (; j < len; j++)
 		{
-			if (!isdigit(argv[i][j]))
+			if (strchr(chd, argv[i][j]) != NULL)
 			{
 				puts("Error");
 				exit(98);
 			}
 		}
-
 		n = strtol(argv[i], NULL, 10);
-
 		prod *= n;
-
 		i++;
 	}
+	while (k <= 2)
+	{
+		len = strlen(argv[k]);
+		for (; f < len; f++)
+		{
+			if (strchr(chd, argv[k][f]) == NULL)
+				continue;
 
+			puts("Error");
+			exit(98);
+		}
+		n = strtol(argv[i], NULL, 10);
+		prod *= n;
+		k++;
+	}
 	printf("%ul\n", prod);
-
 	return (0);
 }
