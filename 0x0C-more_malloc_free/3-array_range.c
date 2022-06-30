@@ -12,22 +12,23 @@
 
 int *array_range(int min, int max)
 {
-	int len, *nwarr = NULL;
+	int len, *nwarr = NULL, i = 0;
 
 	if (min > max)
 		return (NULL);
 
-	len = max - min;
+	len = max - min + 1;
 
-	nwarr = malloc(sizeof(*nwarr) * len + sizeof(int));
+	nwarr = malloc(sizeof(*nwarr) * len);
 
 	if (nwarr == NULL)
 		return (NULL);
 
 	while (min <= max)
 	{
-		nwarr[min] = min;
+		nwarr[i] = min;
 		min++;
+		i++;
 	}
 
 	return (nwarr);
