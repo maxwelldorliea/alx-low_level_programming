@@ -52,7 +52,6 @@ int main(int argc, char *argv[])
 		prod *= n;
 		k++;
 	}
-
 	printf("%lu\n", prod);
 	return (0);
 }
