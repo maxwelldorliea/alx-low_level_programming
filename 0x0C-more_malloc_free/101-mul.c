@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned long j = 0, prod = 1, len, n, f = 0, k = 2, i = 1;
+	unsigned long j = 0, len, f = 0, k = 2, i = 1;
 	char *chd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", cmd[4024];
 
 	if (argc != 3)
