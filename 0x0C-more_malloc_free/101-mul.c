@@ -14,8 +14,8 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned long j = 0, len, f = 0, k = 2, i = 1;
-	char *chd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", cmd[4024];
+	unsigned long j = 0, len, f = 0, k = 2, i = 1, prod = 1, n;
+	char *chd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	if (argc != 3)
 	{
@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
 				exit(98);
 			}
 		}
+		n = strtol(argv[i], NULL, 10);
+		prod *= n;
 		i++;
 	}
 	while (k <= 2)
@@ -46,10 +48,11 @@ int main(int argc, char *argv[])
 			puts("Error");
 			exit(98);
 		}
+		n = strtol(argv[k], NULL, 10);
+		prod *= n;
 		k++;
 	}
 
-	snprintf(cmd, sizeof(cmd), "echo \"%s * %s\" | bc", argv[1], argv[2]);
-	system(cmd);
+	printf("%lu\n", prod);
 	return (0);
 }
