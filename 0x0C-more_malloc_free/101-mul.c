@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned int j = 0, prod = 1, len, n, f = 0, k = 2, i = 1;
+	unsigned long j = 0, prod = 1, len, n, f = 0, k = 2, i = 1;
 	char *chd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	if (argc != 3)
@@ -52,6 +52,6 @@ int main(int argc, char *argv[])
 		prod *= n;
 		k++;
 	}
-	printf("%ul\n", prod);
+	printf("%lu\n", prod);
 	return (0);
 }
