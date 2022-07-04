@@ -31,16 +31,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (nname == NULL)
 	{
 		free(nname);
+		free(ndog);
 		return (NULL);
 	}
 	if (owner == NULL)
 		return (NULL);
 	o_len = strlen(owner);
 	nowner = malloc(sizeof(*nowner) * o_len + 1);
-	if (nowner == NULL)
+	if (nowner == NULL)5
 	{
 		free(nname);
 		free(nowner);
+		free(ndog);
 		return (NULL);
 	}
 	strcpy(nname, name);
