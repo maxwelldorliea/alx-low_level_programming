@@ -11,7 +11,6 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	const int OP_LEN = 5;
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -23,7 +22,7 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	while (i < OP_LEN)
+	while (i < 5)
 	{
 		if (strcmp(ops[i].op, s) == 0)
 			return (ops[i].f);
