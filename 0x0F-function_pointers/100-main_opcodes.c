@@ -13,7 +13,9 @@
 
 int main(int argc, char **argv)
 {
-	int num, k = 0;
+	int num, k = 0, (*code)(int, char **) = main;
+
+	unsigned char opcode;
 
 	if (argc != 2)
 	{
@@ -31,12 +33,14 @@ int main(int argc, char **argv)
 
 	while (k < num)
 	{
-		printf("%.2hhx", argv[k]);
+		opcode = *(unsigned char *)code;
+		printf("%.2x", opcode);
 		if (k < (num - 1))
 		{
 			printf(" ");
 		}
 
+		code++;
 		k++;
 	}
 
