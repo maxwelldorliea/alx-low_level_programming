@@ -14,6 +14,7 @@
 int main(int argc, char **argv)
 {
 	ud_t ud_obj;
+	int num;
 
 	if (argc != 2)
 	{
@@ -21,14 +22,16 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	if ((atoi(argv[1])) < 0)
+	num = atoi(argv[1]);
+
+	if (num < 0)
 	{
 		puts("Error");
 		exit(2);
 	}
 
 	ud_init(&ud_obj);
-	ud_set_input_file(&ud_obj, stdin);
+	ud_set_input_buffer(&ud_obj, argv[1], num);
 	ud_set_mode(&ud_obj, 64);
 	ud_set_syntax(&ud_obj, UD_SYN_INTEL);
 
