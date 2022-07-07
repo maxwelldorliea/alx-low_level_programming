@@ -88,7 +88,8 @@ void pr_str(va_list args)
 {
 	if (args == NULL)
 	{
-		puts("(nil)");
+		printf("(nil)");
+		return;
 	}
 	printf("%s", va_arg(args, char *));
 }
