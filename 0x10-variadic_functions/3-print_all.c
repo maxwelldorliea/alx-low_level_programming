@@ -12,14 +12,17 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int k = 0;
+	char *sep;
 	prv_t prv[] = {
 		{'c', pr_ch},
 		{'i', pr_int},
 		{'f', pr_flt},
 		{'s', pr_str}
 	};
-	int i = 0, len = strlen(format) - 1;
+	int i = 0, k = 0;
+
+	sep = "";
+
 	va_start(args, format);
 
 	while (format[i])
@@ -29,10 +32,9 @@ void print_all(const char * const format, ...)
 		{
 			if (prv[k].id == format[i])
 			{
+				printf("%s", sep);
 				prv[k].f(args);
-
-				if (i != len)
-					printf(", ");
+				sep = ", ";
 				break;
 			}
 			k++;
@@ -86,5 +88,10 @@ void pr_flt(va_list args)
 
 void pr_str(va_list args)
 {
+	if (args == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
 	printf("%s", va_arg(args, char *));
 }
