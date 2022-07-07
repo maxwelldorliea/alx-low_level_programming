@@ -11,8 +11,14 @@
 
 void print_all(const char * const format, ...)
 {
-	char *token = "cifs";
 	va_list args;
+	int k = 0;
+	prv_t prv[] = {
+		{'c', pr_ch},
+		{'i', pr_int},
+		{'f', pr_flt},
+		{'s', pr_str}
+	};
 	int i = 0, len;
 
 	if (format == NULL)
@@ -22,33 +28,71 @@ void print_all(const char * const format, ...)
 
 	while (format[i])
 	{
-		if (strchr(token, format[i]) == NULL)
+		k = 0;
+		while (k < 4)
 		{
-			i++;
-			continue;
+			if (prv[k].id == format[i])
+			{
+				prv[k].f(args);
+
+				if (i != len)
+					printf(", ");
+				break;
+			}
+			k++;
 		}
 
-		switch (format[i])
-		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 's':
-				printf("%s", va_arg(args, char *));
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				break;
-		}
-
-		if (i != len)
-			printf(", ");
 		i++;
 	}
 
 	va_end(args);
 	printf("\n");
+}
+
+/**
+ * pr_ch - prints char
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_ch(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+
+/**
+ * pr_int - prints int
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_int(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+
+/**
+ * pr_flt - prints float
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_flt(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+
+/**
+ * pr_str - prints string
+ * @args: va_list
+ * Return: Nothing
+ */
+
+void pr_str(va_list args)
+{
+	if (args == NULL)
+	{
+		puts("(nil)");
+	}
+	printf("%s", va_arg(args, char *));
 }
