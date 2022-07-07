@@ -86,10 +86,5 @@ void pr_flt(va_list args)
 
 void pr_str(va_list args)
 {
-	if (args == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
 	printf("%s", va_arg(args, char *));
 }
