@@ -95,5 +95,5 @@ void pr_str(va_list args)
 		printf("(nil)");
 		return;
 	}
-	printf("%s", va_arg(args, char *));
+	printf("%s", str);
 }
