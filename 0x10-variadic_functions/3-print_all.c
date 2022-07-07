@@ -19,11 +19,7 @@ void print_all(const char * const format, ...)
 		{'f', pr_flt},
 		{'s', pr_str}
 	};
-	int i = 0, len;
-
-	if (format == NULL)
-		return;
-	len = strlen(format) - 1;
+	int i = 0, len = strlen(format) - 1;
 	va_start(args, format);
 
 	while (format[i])
