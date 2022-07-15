@@ -8,7 +8,7 @@ section .text:
 	mov eax, 0x4
 	mov ebx, 1
 	mov ecx, message
-	mov edx, msglen
+	mov edx, msg_len
 
 	int 0x80
 
@@ -21,4 +21,4 @@ section .text:
 section .data:
 
 	message: db "Hello, Holberton", 0xA
-	msglen equ $-message
+	msg_len equ $-message
