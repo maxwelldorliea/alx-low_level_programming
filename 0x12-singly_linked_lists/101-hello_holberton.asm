@@ -1,10 +1,12 @@
 ; prints Hello, Holberton
 
-global start
-
 section .text:
 
-   start:
+extern printf
+global main
+
+
+  main:
 	mov eax, 0x4
 	mov ebx, 1
 	mov ecx, message
