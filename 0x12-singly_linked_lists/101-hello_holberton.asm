@@ -2,25 +2,24 @@
 
 section .text:
 
-extern printf
 global main
 
 
   main:
-	mov eax, 0x4
-	mov ebx, 1
-	mov ecx, message
-	mov edx, msg_len
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, message
+	mov rdx, msg_len
 
-	int 0x80
+	syscall
 
-	mov eax, 0x1
-	mov ebx, 0
+	mov rax, 60
+	mov rdi, 0
 
-	int 0x80
+	syscall
 
 
-section .data:
+section .rodata:
 
-	message: db "Hello, Holberton", 0xA
-	msg_len equ $-message
+	message: db "Hello, Holberton", 10
+	msg_len: equ $ - message
