@@ -40,13 +40,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		if (curr == NULL || curr->next == NULL)
 			return (NULL);
-
 		curr = curr->next;
 		i++;
 	}
 
+	if (i > idx)
+		return (NULL);
+
 	node->next = curr->next;
 	curr->next = node;
-
 	return (node);
 }
