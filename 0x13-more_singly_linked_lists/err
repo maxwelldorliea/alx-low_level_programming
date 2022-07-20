@@ -1,0 +1,21 @@
+103-find_loop.c: In function ‘find_listint_loop’:
+103-find_loop.c:12:39: error: invalid initializer
+   12 |  listint_t *slw_ptr = head, fst_ptr = head;
+      |                                       ^~~~
+103-find_loop.c:14:17: error: invalid operands to binary && (have ‘int’ and ‘listint_t’ {aka ‘struct listint_s’})
+   14 |  while (slw_ptr && fst_ptr && fst_ptr->next)
+      |         ~~~~~~~ ^~
+      |         |
+      |         int
+103-find_loop.c:14:38: error: invalid type argument of ‘->’ (have ‘listint_t’ {aka ‘struct listint_s’})
+   14 |  while (slw_ptr && fst_ptr && fst_ptr->next)
+      |                                      ^~
+103-find_loop.c:17:20: error: invalid type argument of ‘->’ (have ‘listint_t’ {aka ‘struct listint_s’})
+   17 |   fst_ptr = fst_ptr->next->next;
+      |                    ^~
+103-find_loop.c:19:15: error: invalid operands to binary == (have ‘listint_t *’ {aka ‘struct listint_s *’} and ‘listint_t’ {aka ‘struct listint_s’})
+   19 |   if (slw_ptr == fst_ptr)
+      |               ^~
+103-find_loop.c:20:11: error: incompatible types when returning type ‘listint_t’ {aka ‘struct listint_s’} but ‘listint_t *’ {aka ‘struct listint_s *’} was expected
+   20 |    return (fst_ptr);
+      |           ^
