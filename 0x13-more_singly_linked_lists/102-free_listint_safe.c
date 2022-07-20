@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints all nodes of a linkedlist
- * @head: head of the list
+ * free_listint_safe - prints all nodes of a linkedlist
+ * @h: head of the list
  * Return: number of node printed
  */
 
@@ -16,6 +16,7 @@ size_t free_listint_safe(listint_t **h)
 	while (*h != NULL)
 	{
 		listint_t *tmp;
+
 		len++;
 		if (*h > (*h)->next)
 		{
