@@ -3,20 +3,13 @@
 
 /**
  * get_bit_len - return the number bit in a number
- * @n: number to be check
  *
  * Return: number of bits
  */
 
-unsigned int get_bit_len(unsigned long int n)
+unsigned int get_bit_len(void)
 {
-	int len = 0;
-
-	while (n >> 1)
-	{
-		len++;
-		n >>= 1;
-	}
+	unsigned int len = sizeof(unsigned long int) * 8;
 
 	return (len);
 }
@@ -31,7 +24,7 @@ unsigned int get_bit_len(unsigned long int n)
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int idx = get_bit_len(n);
+	unsigned int idx = get_bit_len();
 	int bit;
 
 	if (index >= idx)
