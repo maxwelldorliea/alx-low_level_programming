@@ -1,0 +1,5 @@
+0-read_textfile.c: In function ‘read_textfile’:
+0-read_textfile.c:34:13: error: initialization of ‘char’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   34 |   char ch = buf;
+      |             ^~~
+cc1: all warnings being treated as errors
