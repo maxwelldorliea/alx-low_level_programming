@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	fd_fr = open(argv[1], O_RDONLY);
 	if (fd_fr == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
