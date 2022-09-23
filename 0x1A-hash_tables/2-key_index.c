@@ -3,7 +3,7 @@
 /**
  * key_index - returns the index of the key in the array
  * @key: key to be return
- * size: size of the array
+ * @size: size of the array
  * Return: index of the key in the array
  */
 
