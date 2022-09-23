@@ -49,7 +49,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	tmp = h;
 
 	while (tmp->next)
+	{
+		if (strcmp(tmp->value, map->value) == 0)
+		{
+			tmp->value = map->value;
+			return (0);
+		}
 		tmp = tmp->next;
+	}
 
 	tmp->next = map;
 
