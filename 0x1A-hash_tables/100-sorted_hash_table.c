@@ -185,8 +185,7 @@ void shash_table_print(const shash_table_t *ht)
 		if (flag)
 			printf(", ");
 		printf("'%s': '%s'", tmp->key, tmp->value);
-		if (!flag)
-			flag = 1;
+		flag = 1;
 		tmp = tmp->snext;
 	}
 	printf("}\n");
@@ -211,8 +210,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 		if (flag)
 			printf(", ");
 		printf("'%s': '%s'", tmp->key, tmp->value);
-		if(!flag)
-			flag = 1;
+		flag = 1;
 		tmp = tmp->sprev;
 	}
 	printf("}\n");
