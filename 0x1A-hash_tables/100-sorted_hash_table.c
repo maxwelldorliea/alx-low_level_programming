@@ -6,7 +6,6 @@
  *
  * Return: pointer to the new table, or NULL on failure
  */
-
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	unsigned long int i;
@@ -174,7 +173,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t *tmp;
-	int flag = 0;
+	char flag = 0; /* 0 before printing any data, 1 after*/
 
 	if (ht == NULL || ht->array == NULL)
 		return;
@@ -182,7 +181,7 @@ void shash_table_print(const shash_table_t *ht)
 	tmp = ht->shead;
 	while (tmp != NULL)
 	{
-		if (flag)
+		if (flag == 1)
 			printf(", ");
 		printf("'%s': '%s'", tmp->key, tmp->value);
 		flag = 1;
@@ -200,14 +199,15 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *tmp;
-	int flag = 0;
+	char flag = 0; /* 0 before printing any data, 1 after*/
+
 	if (ht == NULL || ht->array == NULL)
 		return;
 	printf("{");
 	tmp = ht->stail;
 	while (tmp != NULL)
 	{
-		if (flag)
+		if (flag == 1)
 			printf(", ");
 		printf("'%s': '%s'", tmp->key, tmp->value);
 		flag = 1;
