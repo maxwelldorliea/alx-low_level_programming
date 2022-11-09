@@ -1,0 +1,10 @@
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(wildcard *.o)
+NAME = school
+
+
+all: ${SRC:%.c=%.o}
+	$(CC) $^ -o $(NAME)
+%: %.c m.h
+	$(CC) -c $<
