@@ -26,7 +26,7 @@ def island_perimeter(grid):
 
     def dfs(i, j):
         """Implement Dept First Search."""
-        if i >= len(grid) or j >= len(grid[0]):
+        if i >= len(grid) or j >= len(grid[i]):
             return 1
         elif i < 0 or j < 0:
             return 1
@@ -37,10 +37,10 @@ def island_perimeter(grid):
             return 0
 
         visited.add((i, j))
-        peri = dfs(i+1, j)
-        peri += dfs(i, j+1)
-        peri += dfs(i-1, j)
+        peri = dfs(i, j+1)
+        peri += dfs(i+1, j)
         peri += dfs(i, j-1)
+        peri += dfs(i-1, j)
 
         return peri
 
@@ -48,3 +48,4 @@ def island_perimeter(grid):
         for j in range(len(grid[i])):
             if grid[i][j] == 1:
                 return dfs(i, j)
+    return 0
