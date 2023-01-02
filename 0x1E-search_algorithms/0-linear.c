@@ -4,7 +4,7 @@
  * linear_search - search for a target in an array
  * @array: array to be searched
  * @size: size of the array
- * @value: target to search for 
+ * @value: target to search for
  * Return: index of the first occurrance of the target or -1 if not found
  */
 
