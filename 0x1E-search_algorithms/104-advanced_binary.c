@@ -25,17 +25,50 @@ void print_array(int *array, size_t low, size_t high)
 }
 
 /**
+ * bs_search - search for a target in an array
+ * @array: array to be searched
+ * @low: start index of the array
+ * @high: end index of the array
+ * @index: the  index to be returned
+ * @value: target to search for
+ * Return: index of the first occurrance of the target or -1 if not found
+ */
+
+int bs_search(int *array, size_t low, size_t high, int index, int value)
+{
+	size_t mid;
+
+	if (low > high)
+		return (index);
+
+	mid = low + (high - low) / 2;
+	if ((int)mid != index)
+		print_array(array, low, high);
+
+	if (array[mid] == value && (int)mid != index)
+	{
+		index = mid;
+		high = mid;
+	}
+	else if (array[mid] < value)
+		low = mid + 1;
+	else
+		high = mid - 1;
+
+	return (bs_search(array, low, high, index, value));
+}
+
+
+/**
  * advanced_binary - search for a target in an array
  * @array: array to be searched
  * @size: size of the array
  * @value: target to search for
  * Return: index of the first occurrance of the target or -1 if not found
  */
-
-
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t low, high, mid;
+	size_t low, high;
 	int index = -1;
 
 	if (!array)
@@ -43,22 +76,5 @@ int advanced_binary(int *array, size_t size, int value)
 	low = 0;
 	high = size - 1;
 
-	while (low <= high)
-	{
-		print_array(array, low, high);
-		mid = low + (high - low) / 2;
-
-		if (array[mid] == value && (int)mid != index)
-		{
-			index = mid;
-			high = mid;
-		}
-
-		else if (array[mid] < value)
-			low = mid + 1;
-		else
-			high = mid - 1;
-	}
-
-	return (index);
+	return (bs_search(array, low, high, index, value));
 }
