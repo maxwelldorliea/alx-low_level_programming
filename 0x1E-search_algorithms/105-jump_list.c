@@ -54,8 +54,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (high >= size)
 	{
 		high = size - 1;
-		printf("Value checked at index [%ld] = [%d]\n", high, getNode(
-					list, high)->n);
+		printf("Value checked at index [%ld] = [%d]\n", high, getNode(list, high)->n);
 	}
 
 	printf("Value found between indexes [%ld] and [%ld]\n", low, high);
