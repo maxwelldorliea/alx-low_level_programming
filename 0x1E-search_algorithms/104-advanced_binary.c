@@ -70,12 +70,16 @@ int bs_search(int *array, size_t low, size_t high, int index, int value)
 int advanced_binary(int *array, size_t size, int value)
 {
 	size_t low, high;
-	int index = -1;
+	int index;
 
 	if (!array)
 		return (-1);
 	low = 0;
 	high = size - 1;
 
-	return (bs_search(array, low, high, index, value));
+	index = bs_search(array, low, high, -1, value);
+
+	if (index >= 0 && array[index] != value)
+		return (-1);
+	return (index);
 }
