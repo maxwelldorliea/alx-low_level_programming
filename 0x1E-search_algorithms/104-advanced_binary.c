@@ -42,8 +42,9 @@ int bs_search(int *array, size_t low, size_t high, int index, int value)
 		return (index);
 
 	mid = low + (high - low) / 2;
-	if ((int)mid != index)
-		print_array(array, low, high);
+	if ((int)mid == index && mid == high && mid == low)
+		return (index);
+	print_array(array, low, high);
 
 	if (array[mid] == value && (int)mid != index)
 	{
